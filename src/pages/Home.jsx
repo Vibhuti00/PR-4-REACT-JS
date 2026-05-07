@@ -1,6 +1,16 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 function Home() {
+    const [blog, setBlog] = useState([]);
+    const [title, setTitle] = useState([]);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+    const handleChange = (e) => {
+        console.log(e.target.value);
+    }                                  
     return (
         <div>
             <div className="container mt-5">
