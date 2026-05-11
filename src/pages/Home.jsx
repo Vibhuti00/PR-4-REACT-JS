@@ -14,6 +14,7 @@ function Home() {
     return (
         <div>
             <div className="container mt-5">
+                <div><h2>Home Page</h2></div>
                 <div className="row justify-content-center">
                     <div className="col-md-6">
                         <h2 className="text-center mb-4">Date Form</h2>
