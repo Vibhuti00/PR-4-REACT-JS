@@ -5,6 +5,7 @@ function Dashboard() {
     <div>
       <div className="container">
         <h1>Dashboard</h1>
+        <img src="" alt="" />
       </div>
     </div>  
   )
