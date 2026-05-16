@@ -1,15 +1,8 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-
 function Register() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    mobile: '',
-    password: ''
-  })
-
+  const [formData, setFormData] = useState({})
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({
@@ -17,7 +10,6 @@ function Register() {
       [name]: value
     }))
   }
-
   const handleSubmit = (e) => {
     e.preventDefault()
     alert('Registration Successful')
@@ -29,7 +21,6 @@ function Register() {
       password: ''
     })
   }
-
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">

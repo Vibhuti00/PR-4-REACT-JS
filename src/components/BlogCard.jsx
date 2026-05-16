@@ -1,16 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-/**
- * BlogCard component displays a blog post summary card.
- * 
- * @param {Object} props
- * @param {Object} props.blog - The blog object to display.
- * @param {number|string} props.blog.id - The unique identifier for the blog.
- * @param {string} props.blog.title - The title of the blog post.
- * @param {string} props.blog.category - The category of the blog post.
- * @param {string} props.blog.image - The URL of the blog image.
- * @param {function} props.handleDelete - Function to call when deleting the blog post.
- */
+
 function BlogCard({ blog, handleDelete }) 
 {
   const handleDeleteClick = () => {

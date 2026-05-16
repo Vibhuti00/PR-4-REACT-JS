@@ -2,6 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 const Dashboard = () => {
+  
   return (
     <div className="container mt-5">
       <div className="card p-4 shadow">

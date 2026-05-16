@@ -4,12 +4,7 @@ import { useNavigate } from 'react-router-dom'
 function CreateBlog() 
 {
   const navigate = useNavigate()
-  const [formData, setFormData] = useState({
-    title: '',
-    category: '',
-    image: '',
-    description: ''
-  })
+  const [formData, setFormData] = useState({})
   const [successMessage, setSuccessMessage] = useState('')
   const handleChange = (e) => 
   {
@@ -77,6 +72,4 @@ function CreateBlog()
     </div>
   )
 }
-}
-export default CreateBlog
 export default CreateBlog

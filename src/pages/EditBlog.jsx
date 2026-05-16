@@ -7,15 +7,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 function EditBlog() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const [formData, setFormData] = useState({
-    title: '',
-    category: '',
-    image: '',
-    description: ''
-  })
+  const [formData, setFormData] = useState({})
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
-
   const getBlog = async () => {
     try {
       const response = await API.get(`/blogs/${id}`)
@@ -32,13 +26,11 @@ function EditBlog() {
       setLoading(false)
     }
   }
-
   useEffect(() => {
     if (id) {
       getBlog()
     }
   }, [id])
-
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({
@@ -46,7 +38,6 @@ function EditBlog() {
       [name]: value
     }))
   }
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
@@ -57,7 +48,6 @@ function EditBlog() {
       console.error(err)
     }
   }
-
   if (loading) {
     return (
       <div className="container mt-4">
@@ -65,7 +55,6 @@ function EditBlog() {
       </div>
     )
   }
-
   return (
     <div className="container mt-4">
       <div className="card p-4">

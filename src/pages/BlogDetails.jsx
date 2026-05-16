@@ -7,20 +7,17 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 function BlogDetails() {
   const { id } = useParams()
   const [blog, setBlog] = useState(null)
-  const getBlog = async () => 
-  {
+  const getBlog = async () => {
     try {
       const response = await API.get(`/blogs/${id}`)
       setBlog(response.data)
     } catch (error) {
-      console.error('Failed to fetch blog:', error)
-      setBlog({})
-    }, [id]
-  )
-  useEffect(() => 
-    {
-      getBlog()
-    }, []
+      console.error('Error fetching blog:', error)
+    }
+  }
+  useEffect(() => {
+    getBlog()
+  }, []
   )
   return (
     <div className="container mt-4">
