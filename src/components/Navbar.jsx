@@ -1,21 +1,20 @@
 import React from 'react'
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-function Navbar()
+import { Link } from 'react-router-dom'
+function Navbar() 
 {
-    return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container">
-                <form action="" method="">
-                    <Link className="navbar-brand" to="/">Blog App</Link>
-                    <Link className="btn btn-light me-2" to="/">Home</Link>
-                    <Link className="btn btn-warning" to="/create">Create Blog</Link>
-                </form>
-            </div>
-        </nav>
-    )
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
+        <Link className="navbar-brand" to="/">Blog App</Link>
+        <div>
+          <Link className="btn btn-light me-2" to="/">Home</Link>
+          <Link className="btn btn-warning me-2" to="/create">Create Blog</Link>
+          <Link className="btn btn-success me-2" to="/login">Login</Link>
+          <Link className="btn btn-info" to="/register">Register</Link>
+        </div>
+      </div>
+    </nav>
+  )
 }
-export default Navbar;
 
-
+export default Navbar

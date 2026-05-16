@@ -1,6 +1,11 @@
-{}
-
-
-
-
-
+{
+    "blogs": [
+        {
+            "id": 1,
+            "title": "Welcome to the Blog",
+            "category": "General",
+            "image": "https://via.placeholder.com/400x200?text=Blog+Image",
+            "description": "This is a sample blog post. Edit or delete it to see how the app works."
+        }
+    ]
+}

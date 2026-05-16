@@ -1,15 +1,29 @@
-import React from 'react'
+import React, { createContext, useState } from 'react';
+import PropTypes from 'prop-types';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function AuthContext() {
-    
+export const AuthContext = createContext();
+
+function AuthProvider({ children }) {
+  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+
+  const login = () => {
+    setIsLogin(true);
+  };
+
+  const logout = () => {
+    setIsLogin(false);
+  };
+
   return (
-    <div>
-      <div className="container">
-        <h2>Authentication</h2>
-      </div>
-    </div>
-  )
+    <AuthContext.Provider value={{ isLogin, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
-export default AuthContext
-
+export default AuthProvider;
